@@ -9,8 +9,8 @@
 
 .top-banner img {
   width: 100%;
-  height: auto; 
-   /*max-height: 430px;*/ 
+  /*height: auto; 
+   max-height: 430px;*/ 
   object-fit: cover;
   object-position: center;
 }

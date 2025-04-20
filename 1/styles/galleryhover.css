@@ -1,0 +1,47 @@
+.image-gallery {
+  flex: 1 1 300px;
+  position: relative;
+  max-width: 400px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.image-gallery img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 12px; /* Borde redondeado */
+}
+
+/* Mostrar la primera imagen por defecto */
+.image-gallery img:first-child {
+  opacity: 1;
+}
+
+/* Cambiar imagen al pasar el mouse por la galería */
+.image-gallery:hover img {
+  animation: changeImage 5s infinite;
+}
+
+/* Para dispositivos táctiles: animación siempre activa */
+@media (hover: none) and (pointer: coarse) {
+  .image-gallery img {
+    animation: changeImage 5s infinite;
+  }
+}
+
+/* Animación que rota las imágenes */
+@keyframes changeImage {
+  0% { opacity: 1; }
+  20% { opacity: 0; }
+  25% { opacity: 1; }
+  45% { opacity: 0; }
+  50% { opacity: 1; }
+  70% { opacity: 0; }
+  75% { opacity: 1; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
+}

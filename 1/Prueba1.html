@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaguares MTB</title>
+  <link rel="stylesheet" href="styles/general.css" type="text/css">
+  <link rel="stylesheet" href="styles/galleryauto.css" type="text/css">
+  <link rel="stylesheet" href="styles/banner.css" type="text/css">
+  <link rel="stylesheet" href="styles/galleryhover.css" type="text/css">
+  <link rel="stylesheet" href="styles/navigation.css" type="text/css">
+  <link rel="stylesheet" href="styles/sectiontext.css" type="text/css">
+  <link rel="stylesheet" href="styles/sections.css" type="text/css">
+  <link rel="stylesheet" href="styles/carousell.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <header class="top-banner">
+    <img src="images/banner2025.png" alt="Jaguares MTB logo">
+  </header>
+  
+  <!-- <nav class="main-nav">
+    <a href="#quienes">¿Quiénes somos?</a>
+    <a href="#rodadas">Rodadas</a>
+    <a href="#galeria">Galería</a>
+    <a href="#consejos">Consejos</a>
+    <a href="#contacto">Contacto</a>
+  </nav> -->
+
+  <section class="info-section section-contenedor" id="quienes">
+    <div class="text-content">
+      <h2>¿QUIENES SOMOS?</h2>
+      <p>Somos Jaguares MTB, un grupo apasionado por el ciclismo de montaña en Mérida, Yucatán. Rodamos, compartimos y creamos comunidad.</p>
+    </div>
+    <div class="auto-gallery">
+      <div class="gallery-slider"></div>
+    </div>
+  </section>
+  <section class="rodadas-section section-contenedor">
+    <h2>RODADAS</h2>    
+    <div class="rodadas-contenido">
+      <div class="rodada-item">
+        <img src="images/rodadas/principiantes.jpg" alt="Rodada para principiantes">
+        <p>Rodadas suaves y seguras para quienes inician en el ciclismo de montaña. Ritmo relajado y recorridos cortos.</p>
+      </div>      
+      <div class="rodada-item">
+        <img src="images/rodadas/intermedios.JPG" alt="Rodada para intermedios">
+        <p>Rodadas con mayor nivel técnico y físico, ideales para quienes ya tienen experiencia y buscan más aventura.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="section-contenedor galeria-section">
+  <h2>GALERIA</h2>
+  <div class="carousel-container">
+    <button class="prev-btn" id="prevBtn">&#8592;</button>
+    
+    <div class="carousel">
+      <img src="images/gallery/img1.jpg" alt="Imagen 1">
+      <img src="images/gallery/img2.jpg" alt="Imagen 2">
+      <img src="images/gallery/img3.jpg" alt="Imagen 3">
+      <img src="images/gallery/img4.jpg" alt="Imagen 4">
+      <img src="images/gallery/img5.jpg" alt="Imagen 5">
+      <img src="images/gallery/img6.jpg" alt="Imagen 6">
+      <img src="images/gallery/img7.jpg" alt="Imagen 7">
+      <img src="images/gallery/img8.jpg" alt="Imagen 8">
+      <img src="images/gallery/img9.jpg" alt="Imagen 9">
+      <img src="images/gallery/img10.jpg" alt="Imagen 10">
+    </div>
+    
+    <button class="next-btn" id="nextBtn">&#8594;</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span id="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="Imagen ampliada">
+  </div>
+</section>
+
+  
+
+
+
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Rodada 1">
+      <img src="foto2.jpg" alt="Rodada 2">
+      <img src="foto3.jpg" alt="Rodada 3">
+    </div>
+  </section>
+
+  <section id="consejos">
+    <h2>Consejos para rodar</h2>
+    <ul>
+      <li>Verifica el estado de tu bicicleta antes de cada rodada</li>
+      <li>Hidrátate antes, durante y después</li>
+      <li>Usa siempre casco y luces cargadas</li>
+      <li>Respeta a tus compañeros y al entorno natural</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes encontrarnos en redes sociales:</p>
+    <ul>
+      <li><a href="#" style="color: #ffc107;">Facebook</a></li>
+      <li><a href="#" style="color: #ffc107;">Instagram</a></li>
+    </ul>
+    <p>Punto de reunión: <strong>Las Letras Cuxtal</strong></p>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2025 Jaguares MTB. Todos los derechos reservados.</p>
+  </div>
+
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalClose = document.getElementById('modal-close');
+  
+    let currentIndex = 0;
+  
+    // Función para mover el carrousel hacia la izquierda
+    function moveCarousel(direction) {
+      const totalImages = images.length;
+      if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % totalImages;
+      } else if (direction === 'prev') {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      }
+  
+      const offset = -(currentIndex * 33.33); // Desplazamos el carrousel
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+  
+    // Mostrar el modal con la imagen ampliada
+    function openModal(src) {
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+  
+    // Cerrar el modal
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  
+    // Agregar eventos a los botones de navegación
+    prevBtn.addEventListener('click', () => moveCarousel('prev'));
+    nextBtn.addEventListener('click', () => moveCarousel('next'));
+  
+    // Agregar evento para abrir la imagen ampliada en el modal
+    images.forEach(img => {
+      img.addEventListener('click', () => openModal(img.src));
+    });
+  
+    // Cerrar el modal cuando se presiona la "X"
+    modalClose.addEventListener('click', closeModal);
+  
+    // Cerrar el modal cuando se hace clic fuera de la imagen
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

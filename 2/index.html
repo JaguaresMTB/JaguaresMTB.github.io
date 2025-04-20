@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaguares MTB</title>
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --title-color: #ffc107;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header h1 {
+      color: var(--title-color);
+      font-size: 1.5rem;
+    }
+
+    .hero {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hero-container {
+  width: 60%;
+}
+
+.hero-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .hero-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+
+    .section {
+      padding: 2rem;
+    }
+
+    .section h3 {
+      color: var(--title-color);
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #222;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      .hero {
+        height: 200px;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .quienes-somos {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left; /* Para que el título se alinee a la izquierda */
+}
+
+.quienes-somos h3 {
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.quienes-somos p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .quienes-somos {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+   
+  </header>
+  <section class="hero">
+    <div class="hero-container">
+      <img src="images/banner.png" alt="Jaguares MTB">
+    </div>
+  </section>
+  
+  <section class="section quienes-somos">
+    <h3>QUIENES SOMOS</h3>
+    <p>
+        En Jaguares MTB compartimos una misma pasión: el ciclismo de montaña. Nos encanta salir a rodar, pero más allá de eso, 
+        disfrutamos la convivencia, las buenas pláticas, el compañerismo y las experiencias que se viven sobre la bici.<p/>
+
+        Rodamos principalmente por la zona sur de la ciudad de Mérida, explorando rutas, conectando con la naturaleza y promoviendo 
+        esta increíble actividad con quien se anime a acompañarnos. Creemos que todos pueden disfrutar del MTB, sin importar si apenas
+         estás comenzando o ya tienes tiempo pedaleando.<p/>
+        
+        Aquí nadie se queda atrás, Siempre esperamos, siempre apoyamos. Porque eso es lo que hace fuerte a la manada.<p/>
+        
+        Así que si te gusta rodar, convivir, descubrir nuevos caminos y rodearte de buena vibra… este grupo también es para ti. ¡Bienvenido a Jaguares MTB!
+    </p>
+    <div class="slider-container">
+      <img id="slider-img" src="images/us/img1.jpg" alt="Jaguares MTB en acción">
+    </div>
+  </section>
+  
+  
+
+  <section class="section">
+    <h3>Galería de Rodadas</h3>
+    <div class="grid">
+      <div class="card">Foto 1</div>
+      <div class="card">Foto 2</div>
+      <div class="card">Foto 3</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Consejos de Ciclismo</h3>
+    <div class="grid">
+      <div class="card">Consejo 1</div>
+      <div class="card">Consejo 2</div>
+      <div class="card">Consejo 3</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Próximas Rodadas</h3>
+    <div class="grid">
+      <div class="card">Rodada del martes</div>
+      <div class="card">Evento especial</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Síguenos en redes | © 2025 Jaguares MTB</p>
+  </footer>
+
+
+  <script>
+    const images = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Puedes agregar más
+    let index = 0;
+    const sliderImg = document.getElementById("slider-img");
+  
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      sliderImg.src = "images/us/" + images[index];
+    }, 3000); // Cambia cada 3 segundos
+  </script>
+  
+</body>
+</html>

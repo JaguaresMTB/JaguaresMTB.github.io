@@ -4,155 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaguares MTB</title>
-  <style>
-    :root {
-      --bg-color: #000;
-      --text-color: #fff;
-      --title-color: #ffc107;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    header h1 {
-      color: var(--title-color);
-      font-size: 1.5rem;
-    }
-
-    .hero {
-  width: 100%;
-}
-
-.hero {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.hero-container {
-  width: 60%;
-}
-
-.hero-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-  .hero-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-
-
-    .section {
-      padding: 2rem;
-    }
-
-    .section h3 {
-      color: var(--title-color);
-      margin-bottom: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: #222;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    /* Responsive Tweaks */
-    @media (max-width: 768px) {
-      .hero {
-        height: 200px;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-    }
-
-    .quienes-somos {
-  width: 60%;
-  margin: 0 auto;
-  text-align: left; /* Para que el título se alinee a la izquierda */
-}
-
-.quienes-somos h3 {
-  color: var(--title-color);
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.quienes-somos p {
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-  .quienes-somos {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-
-  </style>
+  <link rel="stylesheet" href="style/main.css" type="text/css">
+  <link rel="stylesheet" href="style/us.css" type="text/css">
 </head>
 <body>
-
   <header>
    
   </header>
@@ -176,38 +31,25 @@
         
         Así que si te gusta rodar, convivir, descubrir nuevos caminos y rodearte de buena vibra… este grupo también es para ti. ¡Bienvenido a Jaguares MTB!
     </p>
-    <div class="slider-container">
+    <!-- <div class="slider-container">
       <img id="slider-img" src="images/us/img1.jpg" alt="Jaguares MTB en acción">
-    </div>
+    </div> -->
+
+    <div class="slider-container">
+        <div class="slider-wrapper">
+          <img id="slider-img" src="images/us/img1.jpg" alt="Jaguares MTB en acción">
+          <div id="slider-caption" class="slider-caption">
+            Rodada de montaña<br>Yucatán 2024
+          </div>
+        </div>
+      </div>
+      
+
   </section>
   
   
 
-  <section class="section">
-    <h3>Galería de Rodadas</h3>
-    <div class="grid">
-      <div class="card">Foto 1</div>
-      <div class="card">Foto 2</div>
-      <div class="card">Foto 3</div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h3>Consejos de Ciclismo</h3>
-    <div class="grid">
-      <div class="card">Consejo 1</div>
-      <div class="card">Consejo 2</div>
-      <div class="card">Consejo 3</div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h3>Próximas Rodadas</h3>
-    <div class="grid">
-      <div class="card">Rodada del martes</div>
-      <div class="card">Evento especial</div>
-    </div>
-  </section>
+  
 
   <footer>
     <p>Síguenos en redes | © 2025 Jaguares MTB</p>
@@ -215,14 +57,69 @@
 
 
   <script>
-    const images = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Puedes agregar más
-    let index = 0;
-    const sliderImg = document.getElementById("slider-img");
-  
-    setInterval(() => {
-      index = (index + 1) % images.length;
-      sliderImg.src = "images/us/" + images[index];
-    }, 3000); // Cambia cada 3 segundos
+    // window.addEventListener('load', LoadAboutUsReel);
+
+    // function LoadAboutUsReel() {
+    //     const images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg", "10.jpg"];
+    //     const imageFolder = "images/us/";
+    //     const preloadedImages = [];
+
+    //     // Preload images
+    //     for (let i = 0; i < images.length; i++) {
+    //         const img = new Image();
+    //         img.src = imageFolder + images[i];
+    //         preloadedImages.push(img);
+    //     }
+
+    //     let index = 0;
+    //     const sliderImg = document.getElementById("slider-img");
+    //     sliderImg.src = preloadedImages[index].src; // Set initial image
+
+    //     setInterval(() => {
+    //         index = (index + 1) % preloadedImages.length;
+    //         sliderImg.src = preloadedImages[index].src;
+    //     }, 3000);
+    // }
+
+    window.addEventListener('load', LoadAboutUsReel);
+
+function LoadAboutUsReel() {
+  const slides = [
+    { src: "01.jpg", caption: "Inciamos esta aventura en 2024 y poco a poco más gente si ha ido sumando." },
+    { src: "02.jpg", caption: "Somos un grupo que disfrutamos la convivencia y la amistad ante todo." },
+    { src: "03.jpg", caption: "Contamos con gente preparada para apoyarnos en caso de algún accidente." },
+    { src: "04.jpg", caption: "Entre todos sorteamos problemas y retos que aparezcan en el camino." },
+    { src: "05.jpg", caption: "Nos encanta participar en los eventos y carreras." },
+    { src: "06.jpg", caption: "Nos encanta tomar fotos para tener recuerdos de estos momentos." },
+    { src: "07.jpg", caption: "Para nosotros pasarla bien es más que solo manejar la bicicleta." },
+    { src: "08.jpg", caption: "Nos gusta reunirnos para celebrar las ocasiones especiales." },
+    { src: "09.jpg", caption: "Organizar eventos especiales con causa es algo que nos motiva." },
+    { src: "10.jpg", caption: "En verdad no hay nada mejor que compartir con los demas." }
+  ];
+
+  const imageFolder = "images/us/";
+  const sliderImg = document.getElementById("slider-img");
+  const caption = document.getElementById("slider-caption");
+  const preloadedImages = [];
+
+  slides.forEach(slide => {
+    const img = new Image();
+    img.src = imageFolder + slide.src;
+    preloadedImages.push(img);
+  });
+
+  let index = 0;
+  sliderImg.src = preloadedImages[index].src;
+  caption.innerHTML = slides[index].caption;
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    sliderImg.src = preloadedImages[index].src;
+    caption.innerHTML = slides[index].caption;
+  }, 3500);
+}
+
+
   </script>
   
 </body>

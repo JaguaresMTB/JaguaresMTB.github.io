@@ -1,8 +1,12 @@
+
 :root {
+    --title-font: 'Russo One', sans-serif; /* o Bebas Neue */
+    --body-font: 'Barlow', sans-serif;
     --bg-color: #000;
     --text-color: #fff;
     --title-color: #ffc107;
-}
+  }
+  
 
 * {
     margin: 0;
@@ -13,7 +17,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     line-height: 1.6;
 }
 

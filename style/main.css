@@ -143,23 +143,6 @@ footer {
       padding: 0.5rem 1rem;
     }
   }
-
-/* .contact-btn {
-    background-color: var(--title-color);
-    color: var(--bg-color);
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-family: var(--title-font);
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background 0.3s;
-  }
-  
-  .contact-btn:hover {
-    background-color: #ffdb4d;
-  } */
   
   /* Modal Estilos */
   .modal {
@@ -220,5 +203,19 @@ footer {
     font-size: 1.5rem;
     color: var(--title-color);
     cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  
+    .contact-btn {
+      bottom: 0px; /* antes estaba en 10px */
+      left: 20px;   /* antes estaba en 10px */
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
   }
   

@@ -1,4 +1,5 @@
 window.addEventListener('load', LoadAboutUsReel);
+window.addEventListener('load', ChangeFormBehavior);
 
 function LoadAboutUsReel() {
   const slides = [
@@ -34,4 +35,56 @@ function LoadAboutUsReel() {
     sliderImg.src = preloadedImages[index].src;
     caption.innerHTML = slides[index].caption;
   }, 3500);
+}
+
+
+function openContactModal() {
+  document.getElementById("contactModal").style.display = "flex";
+}
+
+function closeContactModal() {
+  document.getElementById("contactModal").style.display = "none";
+}
+
+// Cierra el modal si se hace clic fuera del contenido
+window.onclick = function(event) {
+  const modal = document.getElementById("contactModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+function ChangeFormBehavior()
+{
+  document.getElementById('mainform').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el comportamiento por defecto
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/jaguaresyuc@gmail.com", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("¡Mensaje enviado con éxito!");
+        form.reset();
+        closeContactModal();
+      } else {
+        alert("Hubo un error al enviar el mensaje.");
+        closeContactModal();
+      }
+    })
+    .catch(error => {
+      console.error("Error al enviar:", error);
+      alert("Hubo un problema al enviar el formulario.");
+      closeContactModal();
+    });
+  });
+
+
 }

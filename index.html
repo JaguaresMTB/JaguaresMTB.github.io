@@ -22,8 +22,26 @@
   <section class="hero">
     <div class="hero-container">
       <img src="images/banner.png" alt="Jaguares MTB">
+      <button class="contact-btn" onclick="openContactModal()">Contacto</button>
     </div>
   </section>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h3>Contáctanos</h3>
+      <form xaction="https://formsubmit.co/jaguaresyuc@gmail.com" xmethod="POST" id="mainform">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+
+
   <section class="section quienes-somos">
     <h3>¡Bienvenidos a Jaguares MTB!</h3>
     <p>

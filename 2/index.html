@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="style/main.css" type="text/css">
   <link rel="stylesheet" href="style/us.css" type="text/css">
   <link rel="stylesheet" href="style/rides.css" type="text/css">
+  <link rel="stylesheet" href="style/advise.css" type="text/css">
   <script src="script/us.js"></script>
   <script src="script/rides.js"></script>
+  <script src="script/advise.js"></script>
 </head>
 <body>
   <header>   
@@ -53,12 +55,53 @@
     </div>
   </section>
 
+  
+
+  <div id="rodadaModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  
+  <section class="recomendaciones-section">
+    <h2>Recomendaciones</h2>
+    <p>Estas son algunas recomendacioens</p>
+    <div class="recomendaciones-grid">
+      <div class="reco-card" onclick="openRecomendacion('bicicleta')">
+        <img src="icons/bicicletaicon.png" alt="Bicicleta" class="reco-icon" />
+        <p>Bicicleta en buen estado</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('casco')">
+        🪖<p>Casco</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('lamparas')">
+        💡<p>Lámparas cargadas</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('recamara')">
+        🛞<p>Recámara de refacción</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('hidratacion')">
+        💧<p>Hidratación</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('herramientas')">
+        🧰<p>Kit herramientas</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('bomba')">
+        🫧<p>Bomba de aire</p>
+      </div>
+      <div class="reco-card" onclick="openRecomendacion('parches')">
+        🩹<p>Parches</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section quienes-somos">
     <h3>Galería.</h3>
-    <p>
+    <p><i>
       "Cada rodada deja una historia, una risa, un reto superado. 
       Aquí les compartimos algunas fotos que capturan esos momentos que nos llenan el alma. 
-      Porque sí… una imagen puede decir más que mil palabras, pero vivirlo en la bici lo dice todo."
+      Porque sí… una imagen puede decir más que mil palabras, pero vivirlo en la bici lo dice todo."</i>
   </p>
     <div class="slider-container">
         <div class="slider-wrapper">
@@ -69,18 +112,19 @@
         </div>
       </div>
   </section>
-
-
   
-  <!-- MODAL -->
-  <div id="rodadaModal" class="modal">
+  <!-- Modal -->
+  <div id="recoModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body"></div>
+      <span class="close" onclick="closeRecoModal()">&times;</span>
+      <h3 id="recoTitle"></h3>
+      <img id="recoImage" src="" alt="" />
+      <p id="recoDescription"></p>
     </div>
   </div>
   
-  
+
+
 
   <footer>
     <p>Síguenos en redes | © 2025 Jaguares MTB</p>

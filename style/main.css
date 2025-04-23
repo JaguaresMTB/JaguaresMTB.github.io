@@ -19,6 +19,21 @@ body {
     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.6;
+    background: url('../images/pattern.jpg') repeat; /* Asegúrate de reemplazar el path */
+    background-size: auto; /* Esto ajusta el tamaño del patrón (opcional) */
+    background-position: top left;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85); /* Más oscuro que 0.5 */
+    z-index: -1;
 }
 
 header {

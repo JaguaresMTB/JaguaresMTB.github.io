@@ -137,7 +137,7 @@ footer {
     }
   
     .contact-btn {
-      bottom: 10px;
+      bottom: 0px;
       left: 10px;
       font-size: 0.6rem;
       padding: 0.4rem 0.8rem;

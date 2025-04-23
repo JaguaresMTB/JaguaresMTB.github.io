@@ -117,9 +117,9 @@ footer {
     background-color: var(--title-color);
     color: var(--bg-color);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.4rem 1rem;
     font-family: var(--title-font);
-    font-size: 1rem;
+    font-size: .9rem;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
@@ -139,8 +139,8 @@ footer {
     .contact-btn {
       bottom: 10px;
       left: 10px;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
+      font-size: 0.6rem;
+      padding: 0.4rem 0.8rem;
     }
   }
   

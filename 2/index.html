@@ -44,7 +44,7 @@
       </div>
   </section> 
 
-  <section class="rodadas-section">
+  <!-- <section class="rodadas-section">
     <div class="rodada-card" onclick="openModal('principiantes')">
       <h3>Rodadas para Principiantes.</h3>
       <img src="images/rides/principiantes.jpg" alt="Principiantes">
@@ -57,6 +57,31 @@
     </div>
   </section>
   
+
+  <div id="rodadaModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div> -->
+
+  <section class="rodadas-section">
+    <div class="rodada-card">
+      <h3>Rodadas Principiantes</h3>
+      <img src="images/rides/principiantes.jpg" alt="Principiantes">
+      <p>Rutas suaves para iniciar en el ciclismo de montaña.</p>
+      <span class="touch-hint">Toca para ver más</span>
+      <button class="ver-mas-btn" onclick="openModal('principiantes')">Ver más</button>
+    </div>
+    <div class="rodada-card">
+      <h3>Rodadas Intermedios</h3>
+      <img src="images/rides/intermedios.jpg" alt="Intermedios">
+      <p>Rutas con más retos y técnicas para avanzar.</p>
+      <span class="touch-hint">Toca para ver más</span>
+      <button class="ver-mas-btn" onclick="openModal('intermedios')">Ver más</button>
+    </div>
+  </section>
+  
   <!-- MODAL -->
   <div id="rodadaModal" class="modal">
     <div class="modal-content">
@@ -64,6 +89,7 @@
       <div id="modal-body"></div>
     </div>
   </div>
+  
   
 
   <footer>

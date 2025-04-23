@@ -18,9 +18,8 @@
       <img src="images/banner.png" alt="Jaguares MTB">
     </div>
   </section>
-  
   <section class="section quienes-somos">
-    <h3>Quienes somos.</h3>
+    <!-- <h3>Quienes somos.</h3> -->
     <p>
         En Jaguares MTB compartimos una misma pasión: el ciclismo de montaña. Nos encanta salir a rodar, pero más allá de eso, 
         disfrutamos la convivencia, las buenas pláticas, el compañerismo y las experiencias que se viven sobre la bici.<p/>
@@ -31,9 +30,34 @@
         
         Aquí nadie se queda atrás, Siempre esperamos, siempre apoyamos. Porque eso es lo que da fortaleza al grupo.<p/>
         
-        Así que si te gusta rodar, convivir, descubrir nuevos caminos y rodearte de buena vibra… este grupo también es para ti. ¡Bienvenido a Jaguares MTB!
+        Así que si te gusta rodar, convivir, descubrir nuevos caminos y rodearte de buena vibra… este grupo también es para ti. 
+        
+        <p><b>¡Bienvenido a Jaguares MTB!</b></p>
     </p>
+  </section>
 
+  <section class="rodadas-section">
+    <div class="rodada-card">
+      <h3>Rodadas para Principiantes.</h3>
+      <img src="images/rides/principiantes.jpg" alt="Principiantes">
+      <p>Rutas cortas y suaves para iniciar en el ciclismo de montaña.</p>
+      <span class="touch-hint">Toca para ver más</span>
+      <button class="ver-mas-btn" onclick="openModal('principiantes')">Ver más</button>
+    </div>
+    <div class="rodada-card">
+      <h3>Rodadas para Intermedios.</h3>
+      <img src="images/rides/intermedios.jpg" alt="Intermedios">
+      <p>Rutas largas con más retos y técnicas para avanzar.</p>
+      <span class="touch-hint">Toca para ver más</span>
+      <button class="ver-mas-btn" onclick="openModal('intermedios')">Ver más</button>
+    </div>
+  </section>
+
+  <section class="section quienes-somos">
+    <h3>Galería.</h3>
+    <p>
+      Les compartimos algunas fotos con los mejores momentos de nuestras aventuras, bien dicen que una imagen dice más que mil palabras.
+  </p>
     <div class="slider-container">
         <div class="slider-wrapper">
           <img id="slider-img" src="images/us/img1.jpg" alt="Jaguares MTB en acción">
@@ -42,45 +66,9 @@
           </div>
         </div>
       </div>
-  </section> 
-
-  <!-- <section class="rodadas-section">
-    <div class="rodada-card" onclick="openModal('principiantes')">
-      <h3>Rodadas para Principiantes.</h3>
-      <img src="images/rides/principiantes.jpg" alt="Principiantes">
-      <p>Rutas suaves y cortas para iniciar en el ciclismo de montaña.</p>
-    </div>
-    <div class="rodada-card" onclick="openModal('intermedios')">
-      <h3>Rodadas para Intermedios.</h3>
-      <img src="images/rides/intermedios.jpg" alt="Intermedios">
-      <p>Rutas más largas con retos y técnicas para avanzar.</p>
-    </div>
   </section>
-  
 
-  <div id="rodadaModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body"></div>
-    </div>
-  </div> -->
 
-  <section class="rodadas-section">
-    <div class="rodada-card">
-      <h3>Rodadas Principiantes</h3>
-      <img src="images/rides/principiantes.jpg" alt="Principiantes">
-      <p>Rutas suaves para iniciar en el ciclismo de montaña.</p>
-      <span class="touch-hint">Toca para ver más</span>
-      <button class="ver-mas-btn" onclick="openModal('principiantes')">Ver más</button>
-    </div>
-    <div class="rodada-card">
-      <h3>Rodadas Intermedios</h3>
-      <img src="images/rides/intermedios.jpg" alt="Intermedios">
-      <p>Rutas con más retos y técnicas para avanzar.</p>
-      <span class="touch-hint">Toca para ver más</span>
-      <button class="ver-mas-btn" onclick="openModal('intermedios')">Ver más</button>
-    </div>
-  </section>
   
   <!-- MODAL -->
   <div id="rodadaModal" class="modal">

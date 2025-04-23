@@ -219,3 +219,37 @@ footer {
     }
   }
   
+  .facebook-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .facebook-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .header-wrapper {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+
+  .instagram-icon {
+    margin-left: 10px; /* space between icons */
+    display: flex;
+    align-items: center;
+  }
+  
+  .instagram-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  

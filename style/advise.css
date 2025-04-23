@@ -20,6 +20,35 @@
       padding: 1rem;
     }
   }
+
+  /* Versión móvil para tarjetas presionables */
+@media (max-width: 768px) {
+  .reco-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px dashed #ffc107; /* estilo llamativo */
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .reco-card:hover,
+  .reco-card:active {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  }
+
+  .reco-card::after {
+    content: "↗ Toca para ver más";
+    font-size: 0.75rem;
+    color: #ffc107;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    opacity: 0.8;
+  }
+}
+
   
 
 .recomendaciones-grid {
@@ -110,4 +139,31 @@
   right: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .reco-card {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .reco-card::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../icons/tapicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    animation: pulseIcon 1.8s infinite;
+  }
+
+  @keyframes pulseIcon {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+  }
 }

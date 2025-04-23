@@ -6,7 +6,7 @@ function openRecomendacion(tipo) {
   const data = {
     bicicleta: {
       titulo: "Bicicleta en buen estado",
-      imagen: "images/advise/bicicletanb.png",
+      imagen: "images/advise/bicicleta.jpg",
       descripcion: "Es fundamental revisar frenos, llantas, cadena y cambios antes de cada rodada. Una bicicleta en buenas condiciones evita accidentes."
     },
     casco: {
@@ -31,7 +31,7 @@ function openRecomendacion(tipo) {
     },
     herramientas: {
       titulo: "Kit de herramientas portátiles",
-      imagen: "images/advise/herramientas.jpg",
+      imagen: "images/advise/multitool.jpg",
       descripcion: "Llaves Allen, desmontadores y multiherramientas te salvarán de muchos imprevistos durante la ruta."
     },
     bomba: {
@@ -43,7 +43,12 @@ function openRecomendacion(tipo) {
       titulo: "Parches",
       imagen: "images/advise/parches.jpg",
       descripcion: "Cuando no hay cámara, unos buenos parches con pegamento o autoadheribles pueden salvar tu rodada."
-    }
+    },
+    snacks: {
+        titulo: "Snacks o Refrigerio",
+        imagen: "images/advise/snack.jpg",
+        descripcion: "Nunca es mala idea tener algún snack para poder recargar energías cuando se necesita."
+      }
   };
 
   const reco = data[tipo];

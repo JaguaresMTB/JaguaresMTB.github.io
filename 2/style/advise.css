@@ -11,6 +11,8 @@
     text-align: center;
     margin-bottom: 1rem;
   }
+
+
   
   @media (max-width: 768px) {
     .recomendaciones-section {
@@ -26,6 +28,12 @@
   gap: 1rem;
   margin-top: 1.5rem;
 }
+
+
+.reco-desc {
+    text-align: justify;
+  }
+  
 
 .reco-card {
   background-color: #222;
@@ -57,7 +65,7 @@
 .reco-icon {
     width: 80px;
     height: 80px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;    
     object-fit: contain;
   }
 
@@ -86,11 +94,15 @@
 }
 
 .modal-content img {
-  width: 100%;
-  height: auto;
-  margin: 1rem 0;
-  border-radius: 10px;
-}
+    max-width: 100%;
+    max-height: 80vh; /* Limits height to 80% of viewport height */
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  
 
 .close {
   position: absolute;

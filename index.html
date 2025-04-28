@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="style/us.css" type="text/css">
   <link rel="stylesheet" href="style/rides.css" type="text/css">
   <link rel="stylesheet" href="style/advise.css" type="text/css">
+  <link rel="stylesheet" href="style/carousel.css" type="text/css">
   <script src="script/us.js"></script>
   <script src="script/rides.js"></script>
   <script src="script/advise.js"></script>
+  <script src="script/carousel.js"></script>
 </head>
 <body>
   <div class="header-wrapper">
@@ -51,8 +53,6 @@
       </form>
     </div>
   </div>
-
-
 
   <section class="section quienes-somos">
     <h3>¡Bienvenidos a Jaguares MTB!</h3>
@@ -153,7 +153,7 @@
     </div>
   </section>
 
-  <section class="section quienes-somos">
+  <!-- <section class="section quienes-somos">
     <h3>Algunos de nuestros mejores momentos.</h3>
     <p><i>
       "Cada rodada deja una historia, una risa, un reto superado. 
@@ -168,7 +168,37 @@
           </div>
         </div>
       </div>
+  </section> -->
+
+  <section class="section quienes-somos">
+    <h3>Algunos de nuestros mejores momentos.</h3>
+    <p><i>
+      "Cada rodada deja una historia, una risa, un reto superado. 
+      Aquí les compartimos algunas fotos que capturan esos momentos que nos llenan el alma. 
+      Porque sí… una imagen puede decir más que mil palabras, pero vivirlo en la bici lo dice todo."</i>
+  </p>
   </section>
+
+  <div class="carousel-container">
+    <button class="prev-btn">←</button>
+    <div class="carousel">
+        <img src="images/us/img1.jpg" alt="Image 1" class="carousel-image" id="carouselImage">
+        <div class="image-text">
+            <p id="linea1">Inciamos esta aventura en abril de 2024</p>
+            <p id="linea2">Nunca nos imaginamos todo lo que llegaríamos hacer</p>
+        </div>
+    </div>
+    <button class="next-btn">→</button>
+</div>
+
+<!-- Modal -->
+<div id="carouselModal" class="modal">
+    <div class="carousel-modal-content">
+        <span class="carousel-close-btn" id="carouselcloseModalBtn">×</span>
+        <img src="images/us/img1.jpg" alt="Modal Image" id="carouselmodalImage">
+        <!-- <p id="carouselmodalText"></p> -->
+    </div>
+</div>
   
   <!-- Modal -->
   <div id="recoModal" class="modal">
@@ -178,7 +208,7 @@
       <img id="recoImage" src="" alt="" />
       <p id="recoDescription"></p>
     </div>
-  </div>
+  </div>  
 
   <footer>
     <p>Síguenos en redes | © 2025 Jaguares MTB</p>

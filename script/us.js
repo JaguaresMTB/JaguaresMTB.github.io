@@ -26,15 +26,15 @@ function LoadAboutUsReel() {
     preloadedImages.push(img);
   });
 
-  let index = 0;
-  sliderImg.src = preloadedImages[index].src;
-  caption.innerHTML = slides[index].caption;
+  // let index = 0;
+  // sliderImg.src = preloadedImages[index].src;
+  // caption.innerHTML = slides[index].caption;
 
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    sliderImg.src = preloadedImages[index].src;
-    caption.innerHTML = slides[index].caption;
-  }, 3500);
+  // setInterval(() => {
+  //   index = (index + 1) % slides.length;
+  //   sliderImg.src = preloadedImages[index].src;
+  //   caption.innerHTML = slides[index].caption;
+  // }, 3500);
 }
 
 

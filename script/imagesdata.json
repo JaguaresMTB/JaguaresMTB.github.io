@@ -1,0 +1,52 @@
+[
+  {
+    "image": "images/us/img1.jpg",
+    "title": "Iniciamos esta aventura en Abril de 2024.",
+    "description": "Con la experiencia que ya teníamos decidimos aventurarnos."
+  },
+  {
+    "image": "images/us/img2.jpg",
+    "title": "Nos gusta rodar para divertirnos y convivir.",
+    "description": "La diversión y la seguridad ante todo es nuestra prioridad."
+  },
+  {
+    "image": "images/us/img3.jpg",
+    "title": "Apoyamos sin importar a quien, cuando podemos.",
+    "description": "Tenemos experiencia en primeros auxilios."
+  },
+  {
+    "image": "images/us/img4.jpg",
+    "title": "Título 4",
+    "description": "Descripción breve de la imagen 4."
+  },
+  {
+    "image": "images/us/img5.jpg",
+    "title": "Título 5",
+    "description": "Descripción breve de la imagen 5."
+  },
+  {
+    "image": "images/us/img6.jpg",
+    "title": "Título 6",
+    "description": "Descripción breve de la imagen 6."
+  },
+  {
+    "image": "images/us/img7.jpg",
+    "title": "Título 7",
+    "description": "Descripción breve de la imagen 7."
+  },
+  {
+    "image": "images/us/img8.jpg",
+    "title": "Título 8",
+    "description": "Descripción breve de la imagen 8."
+  },
+  {
+    "image": "images/us/img9.jpg",
+    "title": "Título 9",
+    "description": "Descripción breve de la imagen 9."
+  },
+  {
+    "image": "images/us/img10.jpg",
+    "title": "Título 10",
+    "description": "Descripción breve de la imagen 10."
+  }
+]

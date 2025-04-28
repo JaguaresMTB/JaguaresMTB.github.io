@@ -1,0 +1,172 @@
+/* Estilo general para el carousel */
+.carousel-container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Altura fija para el carousel */
+  }
+  
+  /* Estilo para la imagen */
+  .carousel img {
+    width: 80%;   /* Ancho fijo de la imagen */
+    height: 350px;  /* Alto fijo de la imagen */
+    object-fit: cover; /* Hace que la imagen se recorte para ajustarse a las dimensiones */
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  /* Botones de navegación */
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones queden por encima de la imagen */
+    border-radius: 50%;
+  }
+  
+  /* Botón de anterior a la izquierda */
+  .prev-btn {
+    left: 95px;
+  }
+  
+  /* Botón de siguiente a la derecha */
+  .next-btn {
+    right: 95px;
+  }
+  
+  /* Estilo para el modal */
+  #carouselModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 15, 15);   
+    align-items: center;
+    justify-content: center;
+    z-index: 100000; /* Asegura que el modal esté encima del contenido */
+    border-radius: 10px;
+  }
+  
+  .carousel-modal-content {    
+    position: relative;
+    width: 100%;    /* Hace que el contenido del modal ocupe el 100% del ancho */
+    height: 100%;   /* Hace que el contenido del modal ocupe el 100% de la altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Evita desbordamientos */
+    border-radius: 10px;
+  }
+  
+  #carouselmodalImage {
+    width: 100%;    /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 100%;   /* Hace que la imagen ocupe toda la altura disponible */
+    object-fit: contain; /* Ajusta la imagen manteniendo sus proporciones */
+    border-radius: 10px;
+  }
+  
+  #carouselmodalText {
+    color: rgb(28, 25, 25);
+    margin-top: 15px;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
+  
+  #carouselcloseModalBtn {
+    position: absolute;
+    top: 10px;
+    right: 21%;
+    background-color: rgba(181, 167, 39, 0.900);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10%;
+    z-index: 2;
+  }
+  
+  /* Responsivo para móviles */
+  @media (max-width: 768px) {
+
+    #carouselModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+          
+      align-items: center;
+      justify-content: center;
+      z-index: 100000; /* Asegura que el modal esté encima del contenido */
+      border-radius: 10px;
+    }
+
+    #carouselcloseModalBtn {
+      position: absolute;
+      top: 27%;
+      right: 3%;
+      background-color: rgba(181, 167, 39, 0.900);
+      color: white;
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10%;
+      z-index: 2;
+    }
+
+
+    .carousel-container {
+      width: 100%;
+    }
+  
+    .prev-btn{
+        font-size: 1.5rem;
+        padding: 8px;
+        left: 50px;
+    }
+    .next-btn {
+      font-size: 1.5rem;
+      padding: 8px;
+      right: 50px;
+    }
+  
+    #modalImage {
+      max-height: 100%; /* Asegura que la imagen ocupe el 100% de la altura disponible */
+    }
+  }
+
+  .image-text{
+    background-color: white;
+    height: 80px;
+    border: none;
+    width: 80%;
+    z-index: 10000;
+    bottom: 50px;
+    position: relative;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  

@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCarousel() {
         carouselImage.src = imagesData[currentIndex].image;
         // linea1.innerText=imagesData[currentIndex].title;
-        linea1.innerText="Haz clic en la imagen para ampliar."
-        linea2.innerText=imagesData[currentIndex].description;
+        linea1.innerText="....";
+        linea2.innerText="Haz clic en la imagen para ampliar.";
     }
 
     // Agregar el event listener para la imagen del carousel

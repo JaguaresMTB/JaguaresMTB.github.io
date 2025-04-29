@@ -38,21 +38,7 @@
       <img src="images/banner.jpg" alt="Jaguares MTB">
       <button class="contact-btn" onclick="openContactModal()">Contacto</button>
     </div>
-  </section>
-
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeContactModal()">&times;</span>
-      <h3>Contáctanos</h3>
-      <form xaction="https://formsubmit.co/jaguaresyuc@gmail.com" xmethod="POST" id="mainform">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu correo" required>
-        <textarea name="message" placeholder="Tu mensaje" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit" class="submit-btn">Enviar</button>
-      </form>
-    </div>
-  </div>
+  </section>  
 
   <section class="section quienes-somos">
     <h3>¡Bienvenidos a Jaguares MTB!</h3>
@@ -87,15 +73,8 @@
       <span class="touch-hint"></span>
       <button class="ver-mas-btn" onclick="openModal('intermedios')">Ver más</button>
     </div>
-  </section>  
+  </section>
 
-  <div id="rodadaModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body"></div>
-    </div>
-  </div>
-  
   <section class="recomendaciones-section">
     <h2>¿Por qué es importante rodar bien preparado?</h2>
     <p class="reco-desc">Rodar en bici es una aventura, pero también implica responsabilidad. 
@@ -153,25 +132,8 @@
     </div>
   </section>
 
-  <!-- <section class="section quienes-somos">
-    <h3>Algunos de nuestros mejores momentos.</h3>
-    <p><i>
-      "Cada rodada deja una historia, una risa, un reto superado. 
-      Aquí les compartimos algunas fotos que capturan esos momentos que nos llenan el alma. 
-      Porque sí… una imagen puede decir más que mil palabras, pero vivirlo en la bici lo dice todo."</i>
-  </p>
-    <div class="slider-container">
-        <div class="slider-wrapper">
-          <img id="slider-img" src="images/us/img1.jpg" alt="Jaguares MTB en acción">
-          <div id="slider-caption" class="slider-caption">
-            Jaguares MTB 2025
-          </div>
-        </div>
-      </div>
-  </section> -->
-
   <section class="section quienes-somos">
-    <h3>Algunos de nuestros mejores momentos.</h3>
+    <h3>Recuerdos sobre ruedas.</h3>
     <p><i>
       "Cada rodada deja una historia, una risa, un reto superado. 
       Aquí les compartimos algunas fotos que capturan esos momentos que nos llenan el alma. 
@@ -191,15 +153,6 @@
     <button class="next-btn">→</button>
 </div>
 
-
-<!-- <div id="carouselModal" class="modal">
-    <div class="carousel-modal-content">
-        <span class="carousel-close-btn" id="carouselcloseModalBtn">×</span>
-        <img src="images/us/img1.jpg" alt="Modal Image" id="carouselmodalImage">
-        
-    </div>
-</div> -->
-
 <div id="carouselModal" class="carousel-modal-content">
   <div class="modal-image-wrapper">
     <img id="carouselmodalImage" src="" alt="Imagen en modal">
@@ -207,17 +160,36 @@
   </div>
   <div id="carouselmodalText"></div>
 </div>
-
   
-  <!-- Modal -->
-  <div id="recoModal" class="modal">
+   <div id="recoModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeRecoModal()">&times;</span>
       <h3 id="recoTitle"></h3>
       <img id="recoImage" src="" alt="" />
       <p id="recoDescription"></p>
     </div>
-  </div>  
+  </div>
+
+  <div id="rodadaModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h3>Contáctanos</h3>
+      <form xaction="https://formsubmit.co/jaguaresyuc@gmail.com" xmethod="POST" id="mainform">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    </div>
+  </div>
 
   <footer>
     <p>Síguenos en redes | © 2025 Jaguares MTB</p>

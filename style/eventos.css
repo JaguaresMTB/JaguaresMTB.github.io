@@ -1,0 +1,53 @@
+.eventos-section {
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: relative;
+  }
+  
+  .eventos-section h3 {
+    color: var(--title-color);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+
+.evento-destacado {
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%; 
+    margin: 0 auto;
+  }
+  
+  .evento-destacado img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .evento-texto {
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: 1rem;
+  }
+  
+  /* Responsivo para móviles */
+  @media (max-width: 768px) {
+    .evento-destacado {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .eventos-section {
+        padding-top: 3rem;
+        text-align: center;
+        width: 100%;
+        left: 0;
+      }
+  }
+  

@@ -45,12 +45,13 @@ function updateBirthday(monthToShow){
     cboMes[monthToShow].selected=true;
     tbody.replaceChildren();
 
-    birthdayData.forEach(entry => {        
-        var newdate = new Date(entry.date);
+    birthdayData.forEach(entry => {
+        const [year, month, day] = entry.date.split('-');
+        var newdate = new Date(year, month - 1, day);
+        // var newdate = new Date(entry.date);
         var elementdate = newdate.getMonth() + 1;
 
-        if (elementdate === monthToShow) {
-            
+        if (elementdate === monthToShow) {    
 
             const tr = document.createElement('tr');
 

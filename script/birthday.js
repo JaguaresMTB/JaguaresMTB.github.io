@@ -1,39 +1,73 @@
- async function loadBirthdays() {
-    try {
-      const response = await fetch('birthdays/birthday.json');
-      const data = await response.json();
+document.addEventListener('DOMContentLoaded', () => {
+    
+    fetch('birthdays/birthday.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar el JSON');
+            }
+            return response.json();
+        })
+        .then(data => {
+            window.birthdayData = data;
 
-      const tbody = document.querySelector('#birthday-table tbody');
-      const now = new Date();
-      const currentMonth = now.getMonth() + 1; // 0-indexed
+            const uniqueMap = new Map();
+            birthdayData.forEach(item => {
+              const key = `${item.name}|${item.date}`;
+              if (!uniqueMap.has(key)) {
+                uniqueMap.set(key, item);
+              }
+            });
+            const uniqueData = Array.from(uniqueMap.values());
+        
+            // Ordenar por fecha
+            uniqueData.sort((a, b) => new Date(a.date) - new Date(b.date));
+            birthdayData=uniqueData;
+            var now = new Date();
+            var currentMonth = now.getMonth() + 1; // 0-indexed
 
-      const formatter = new Intl.DateTimeFormat('es-MX', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-      });
+            updateBirthday(currentMonth);
+        })
+        .catch(error => {
+            console.error('Error al cargar el JSON:', error);
+        });
 
-      data.forEach(entry => {
-        const dateObj = new Date(entry.date);
-        const entryMonth = dateObj.getMonth() + 1;
+});
 
-        if (entryMonth === currentMonth) {
-          const tr = document.createElement('tr');
+function updateBirthday(monthToShow){
+    const tbody = document.querySelector('#birthday-table tbody');
+    const formatter = new Intl.DateTimeFormat('es-MX', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
 
-          const tdName = document.createElement('td');
-          tdName.textContent = entry.name;
+    var cboMes = document.getElementById("mes");
+    cboMes[monthToShow].selected=true;
+    tbody.replaceChildren();
 
-          const tdDate = document.createElement('td');
-          tdDate.textContent = formatter.format(dateObj);
+    birthdayData.forEach(entry => {        
+        var newdate = new Date(entry.date);
+        var elementdate = newdate.getMonth() + 1;
 
-          tr.appendChild(tdName);
-          tr.appendChild(tdDate);
-          tbody.appendChild(tr);
+        if (elementdate === monthToShow) {
+            
+
+            const tr = document.createElement('tr');
+
+            const tdName = document.createElement('td');
+            tdName.textContent = entry.name;
+
+            const tdDate = document.createElement('td');
+            tdDate.textContent = formatter.format(newdate);
+
+            tr.appendChild(tdName);
+            tr.appendChild(tdDate);
+            tbody.appendChild(tr);
         }
-      });
-    } catch (error) {
-      console.error('Error al cargar los cumpleaños:', error);
-    }
-  }
+    });
+}
 
-  window.addEventListener('DOMContentLoaded', loadBirthdays);
+function updateList(){
+    var cboMes = document.getElementById("mes");
+    updateBirthday(parseInt(cboMes.value));
+}

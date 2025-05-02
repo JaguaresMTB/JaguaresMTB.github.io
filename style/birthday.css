@@ -1,0 +1,30 @@
+#birthday-section {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  #birthday-section h2 {
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  #birthday-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #birthday-table th, #birthday-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    #birthday-section {
+      width: 100%;
+      padding: 1rem;
+    }
+  }

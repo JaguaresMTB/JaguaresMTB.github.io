@@ -52,6 +52,13 @@ function SortByDate(dataToSort){
 }
 
 function updateBirthday(monthToShow, isShowByName) {
+
+  if (isShowByName) {
+        birthdayData = SortByName(birthdayData);
+      } else { 
+        birthdayData = SortByDate(birthdayData);
+  }
+  
   const tbody = document.querySelector('#birthday-table tbody');
   const formatter = new Intl.DateTimeFormat('es-MX', {
     day: 'numeric',
@@ -74,8 +81,8 @@ function updateBirthday(monthToShow, isShowByName) {
         
     var elementdate = newdate.getMonth() + 1;
 
-    if ((!isShowByName && elementdate === monthToShow) || isShowByName) {
-
+    if ((!isShowByName && elementdate === monthToShow) || isShowByName)
+    {
       const tr = document.createElement('tr');
 
       const tdName = document.createElement('td');
@@ -89,9 +96,7 @@ function updateBirthday(monthToShow, isShowByName) {
       if (entry.image !== "")
       {
           tdImage.innerHTML = "<img class='imgbirthday' src='birthdays/" + entry.image +"'/>";
-      }
-      
-
+      } 
 
       tr.appendChild(tdName);
       tr.appendChild(tdDate);

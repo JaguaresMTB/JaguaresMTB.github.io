@@ -40,3 +40,11 @@
       width: 100%;
     }
   }
+
+  .imgbirthday
+  {
+      object-fit: cover;      
+      display: block;
+      border-radius: 20px;
+      margin: 0 auto;
+  }

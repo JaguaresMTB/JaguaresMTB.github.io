@@ -51,44 +51,55 @@ function SortByDate(dataToSort){
     return uniqueData;
 }
 
-function updateBirthday(monthToShow, isShowByName){
-    const tbody = document.querySelector('#birthday-table tbody');
-    const formatter = new Intl.DateTimeFormat('es-MX', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    });
+function updateBirthday(monthToShow, isShowByName) {
+  const tbody = document.querySelector('#birthday-table tbody');
+  const formatter = new Intl.DateTimeFormat('es-MX', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
 
-    var cboMes = document.getElementById("mes");
-    cboMes[monthToShow].selected=true;
-    tbody.replaceChildren();
+  var cboMes = document.getElementById("mes");
+  cboMes[monthToShow].selected = true;
+  tbody.replaceChildren();
 
-    if(isShowByName)
-    {
-        birthdayData = SortByName(birthdayData);
-    }
+  if (isShowByName) {
+    birthdayData = SortByName(birthdayData);
+  }
 
-    birthdayData.forEach(entry => {
-        const [year, month, day] = entry.date.split('-');
-        var newdate = new Date(year, month - 1, day);
+  let counter = 1;
+  birthdayData.forEach(entry => {
+    const [year, month, day] = entry.date.split('-');
+    var newdate = new Date(year, month - 1, day);
         
-        var elementdate = newdate.getMonth() + 1;
+    var elementdate = newdate.getMonth() + 1;
 
-        if ((!isShowByName && elementdate === monthToShow) || isShowByName) {    
+    if ((!isShowByName && elementdate === monthToShow) || isShowByName) {
 
-            const tr = document.createElement('tr');
+      const tr = document.createElement('tr');
 
-            const tdName = document.createElement('td');
-            tdName.textContent = entry.name;
+      const tdName = document.createElement('td');
+      tdName.textContent = counter + ". " + entry.name;
 
-            const tdDate = document.createElement('td');
-            tdDate.textContent = formatter.format(newdate);
+      const tdDate = document.createElement('td');
+      tdDate.textContent = formatter.format(newdate);
+            
+      const tdImage = document.createElement('td');
+      tdImage.innerHTML = "image here";
+      if (entry.image !== "")
+      {
+          tdImage.innerHTML = "<img class='imgbirthday' src='birthdays/" + entry.image +"'/>";
+      }
+      
 
-            tr.appendChild(tdName);
-            tr.appendChild(tdDate);
-            tbody.appendChild(tr);
-        }
-    });
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdDate);
+      tr.appendChild(tdImage);
+      tbody.appendChild(tr);
+      counter++;
+    }
+  });
 }
 
 function updateList(){

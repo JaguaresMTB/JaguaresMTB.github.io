@@ -1,178 +1,217 @@
 [
   {
     "name": "Ana Jimenez",
-    "date": "2025-10-14"
+    "date": "2025-10-14",
+    "image": "anjim.jpg"
   },
   {
     "name": "Fabricio Suarez",
-    "date": "2025-08-24"
+    "date": "2025-08-24",
+    "image": "fabricio.jpg"
   },
   {
     "name": "Yoli",
-    "date": "2025-02-8"
+    "date": "2025-02-8",
+    "image": ""
   },
   {
     "name": "Don Willy",
-    "date": "2025-02-23"
+    "date": "2025-02-23",
+    "image": "donwilly.jpg"
   },
   {
     "name": "Leo",
-    "date": "2025-03-09"
+    "date": "2025-03-09",
+    "image": ""
   },
   {
     "name": "Fernando Renan Acevedo Pereyra",
-    "date": "2025-10-03"
+    "date": "2025-10-03",
+    "image": "fer-1.jpg"
   },
   {
     "name": "Oscar Mendez",
-    "date": "2025-02-25"
+    "date": "2025-02-25",
+    "image": ""
   },
   {
     "name": "Martha",
-    "date": "2025-02-22"
+    "date": "2025-02-22",
+    "image": ""
   },
   {
-    "name": "Cesar",
-    "date": "2025-03-06"
+    "name": "Cesar Camara",
+    "date": "2025-03-06",
+    "image": "cesarcamara.jpg"
   },
   {
     "name": "Osiris",
-    "date": "2025-12-02"
+    "date": "2025-12-02",
+    "image": ""
   },
   {
     "name": "Gerry",
-    "date": "2025-05-29"
+    "date": "2025-05-29",
+    "image": "gerry.jpg"
   },
   {
     "name": "Nickolas Enrique Quintal Canul",
-    "date": "2025-01-07"
+    "date": "2025-01-07",
+    "image": ""
   },
   {
     "name": "Don Juanito",
-    "date": "2025-06-10"
+    "date": "2025-06-10",
+    "image": "juanito.jpg"
   },
   {
     "name": "Juan Carlos",
-    "date": "2025-07-11"
+    "date": "2025-07-11",
+    "image": "juancarlos.jpg"
   },
   {
     "name": "ANGEL DAVID TEC CANUL",
-    "date": "2025-03-27"
+    "date": "2025-03-27",
+    "image": "angeltec.jpg"
   },
   {
     "name": "Dña Patty",
-    "date": "2025-08-16"
+    "date": "2025-08-16",
+    "image": "dnapatty.jpg"
   },
   {
     "name": "Davo",
-    "date": "2025-09-12"
+    "date": "2025-09-12",
+    "image": "davo.jpg"
   },
   {
     "name": "Suzzet",
-    "date": "2025-09-05"
+    "date": "2025-09-05",
+    "image": ""
   },
   {
     "name": "Jorge Carlos (JR)",
-    "date": "2025-10-13"
+    "date": "2025-10-13",
+    "image": "jr.jpg"
   },
   {
     "name": "Rafa",
-    "date": "2025-10-09"
+    "date": "2025-10-09",
+    "image": ""
   },
   {
     "name": "Jorge Carlos",
-    "date": "2025-12-10"
+    "date": "2025-12-10",
+    "image": "jorge.jpg"
   },
   {
     "name": "Guerrero",
-    "date": "2025-10-21"
+    "date": "2025-10-21",
+    "image": "guerrero.jpg"
   },
   {
     "name": "Vila",
-    "date": "2025-03-19"
+    "date": "2025-03-19",
+    "image": ""
   },
   {
     "name": "Marisol",
-    "date": "2025-01-04"
+    "date": "2025-01-04",
+    "image": ""
   },
   {
     "name": "Maury",
-    "date": "2025-10-17"
+    "date": "2025-10-17",
+    "image": ""
   },
   {
-    "name": "Jabi Jabalis",
-    "date": "2025-09-15"
+    "name": "Javier Jabalis",
+    "date": "2025-09-15",
+    "image": "javi.jpg"
   },
   {
     "name": "Osiris",
-    "date": "2025-12-02"
+    "date": "2025-12-02",
+    "image": ""
   },
   {
     "name": "Ricardo",
-    "date": "2025-06-17"
+    "date": "2025-06-17",
+    "image": ""
   },
   {
     "name": "Eli",
-    "date": "2025-01-31"
+    "date": "2025-01-31",
+    "image": "eli.jpg"
   },
   {
     "name": "Giovinator",
-    "date": "2025-05-11"
-  },
-  {
-    "name": "Giovinator",
-    "date": "2025-05-11"
+    "date": "2025-05-11",
+    "image": "gio.jpg"
   },
   {
     "name": "Cesar",
-    "date": "2025-11-05"
+    "date": "2025-11-05",
+    "image": "cesar-2.jpg"
   },
   {
     "name": "Hector",
-    "date": "2025-02-20"
+    "date": "2025-02-20",
+    "image": "hector.jpg"
   },
   {
     "name": "Alejandro Gonzalez",
-    "date": "2025-06-19"
+    "date": "2025-06-19",
+    "image": "areks.jpg"
   },
   {
     "name": "Ramses Banares",
-    "date": "2025-02-13"
+    "date": "2025-02-13",
+    "image": "ramses.jpg"
   },
   {
     "name": "Saúl Ismael Chuc Andrade ",
-    "date": "2025-08-10"
+    "date": "2025-08-10",
+    "image": ""
   },
   {
     "name": "RAUL TORRES HERNANDEZ ",
-    "date": "2025-10-06"
+    "date": "2025-10-06",
+    "image": ""
   },
   {
     "name": "Maricarmen Lara mayen",
-    "date": "2025-06-06"
+    "date": "2025-06-06",
+    "image": ""
   },
   {
     "name": "Emmanuel Farid Ruz Aguilar",
-    "date": "2025-02-18"
+    "date": "2025-02-18",
+    "image": "emanuel.jpg"
   },
   {
     "name": "Luis Fernando Chan Martín ",
-    "date": "2025-02-09"
+    "date": "2025-02-09",
+    "image": ""
   },
   {
     "name": "Martha Patricia Lara Riegos ",
-    "date": "2025-08-16"
+    "date": "2025-08-16",
+    "image": ""
   },
   {
     "name": "Kike tribalista ",
-    "date": "2025-02-18"
+    "date": "2025-02-18",
+    "image": ""
   },
   {
     "name": "Arael Ascencio Rojas",
-    "date": "2025-03-24"
+    "date": "2025-03-24",
+    "image": ""
   },
   {
     "name": "Yakko",
-    "date": "2025-08-09"
+    "date": "2025-08-09",
+    "image": ""
   }
 ]

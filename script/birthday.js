@@ -1,26 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    fetch('birthdays/birthday.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('No se pudo cargar el JSON');
-            }
-            return response.json();
-        })
-        .then(data => {
-            window.birthdayData = data;
-            birthdayData = SortByName(birthdayData);
-            var now = new Date();
-            var currentMonth = now.getMonth() + 1; // 0-indexed
+  fetch('birthdays/birthday.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el JSON');
+      }
+      return response.json();
+    })
+    .then(data => {
+      window.birthdayData = data;
+      birthdayData = SortByName(birthdayData);
+      var now = new Date();
+      var currentMonth = now.getMonth() + 1; // 0-indexed
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const showAll = urlParams.get('showall')=="true";
+      const urlParams = new URLSearchParams(window.location.search);
+      const showAll = urlParams.get('showall') == "true";
+          
+      const fecha = new Date();
+      const mesTexto = fecha.toLocaleString('es-ES', { month: 'long' });
 
-            updateBirthday(currentMonth,showAll);
-        })
-        .catch(error => {
-            console.error('Error al cargar el JSON:', error);
-        });
+      
+
+      updateBirthday(currentMonth, showAll);
+    })
+    .catch(error => {
+      console.error('Error al cargar el JSON:', error);
+    });
 
 });
 
@@ -53,10 +58,12 @@ function SortByDate(dataToSort){
 
 function updateBirthday(monthToShow, isShowByName) {
 
+  const cboMes = document.getElementById("mes");
   if (isShowByName) {
-        birthdayData = SortByName(birthdayData);
-      } else { 
-        birthdayData = SortByDate(birthdayData);
+    birthdayData = SortByName(birthdayData);
+    monthToShow = 0;
+  } else {
+    birthdayData = SortByDate(birthdayData);
   }
   
   const tbody = document.querySelector('#birthday-table tbody');
@@ -66,13 +73,15 @@ function updateBirthday(monthToShow, isShowByName) {
     year: 'numeric'
   });
 
-  var cboMes = document.getElementById("mes");
+ 
   cboMes[monthToShow].selected = true;
   tbody.replaceChildren();
 
   if (isShowByName) {
     birthdayData = SortByName(birthdayData);
   }
+
+  document.getElementById("titlemes").innerText = "Miembros registrados que cumplen años en " + cboMes.options[cboMes.selectedIndex].text;
 
   let counter = 1;
   birthdayData.forEach(entry => {
@@ -81,8 +90,7 @@ function updateBirthday(monthToShow, isShowByName) {
         
     var elementdate = newdate.getMonth() + 1;
 
-    if ((!isShowByName && elementdate === monthToShow) || isShowByName)
-    {
+    if ((!isShowByName && elementdate === monthToShow) || isShowByName) {
       const tr = document.createElement('tr');
 
       const tdName = document.createElement('td');
@@ -93,10 +101,9 @@ function updateBirthday(monthToShow, isShowByName) {
             
       const tdImage = document.createElement('td');
       tdImage.innerHTML = "image here";
-      if (entry.image !== "")
-      {
-          tdImage.innerHTML = "<img class='imgbirthday' src='birthdays/" + entry.image +"'/>";
-      } 
+      if (entry.image !== "") {
+        tdImage.innerHTML = "<img class='imgbirthday' src='birthdays/" + entry.image + "'/>";
+      }
 
       tr.appendChild(tdName);
       tr.appendChild(tdDate);
@@ -107,7 +114,7 @@ function updateBirthday(monthToShow, isShowByName) {
   });
 }
 
-function updateList(){
-    var cboMes = document.getElementById("mes");
-    updateBirthday(parseInt(cboMes.value));
+function updateList() {
+  var cboMes = document.getElementById("mes");
+  updateBirthday(parseInt(cboMes.value), cboMes.value === "all");
 }

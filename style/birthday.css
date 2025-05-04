@@ -48,3 +48,25 @@
       border-radius: 20px;
       margin: 0 auto;
   }
+
+ .site-header {
+   width: 100%;
+   padding: 20px 0;
+   background-color: transparent;
+   /* Ajusta a tu fondo */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .logo-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .site-logo {
+   max-width: 200px;
+   width: 100%;
+   height: auto;
+ }
